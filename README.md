@@ -53,7 +53,7 @@ Feature-space adversarial perturbations are useful for controlled experiments bu
 
 The implementation is intentionally conservative: it does not automatically retrain on every prediction or treat an unverified model prediction as ground truth.
 
-## Repository structure
+## 🏗️Repository structure
 
 ```text
 Adaptive-IDS/
