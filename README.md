@@ -78,7 +78,7 @@ Adaptive-IDS/
     └── test_data.py
 ```
 
-## Requirements
+## 📋Requirements
 
 - Python 3.10 or newer
 - pandas
@@ -127,7 +127,7 @@ Prepare a CSV containing numeric flow features and a target column named `Label`
 
 Do not commit the dataset unless you have checked its licensing, size, and redistribution terms. See [`data/README.md`](data/README.md).
 
-## Run the project
+## ✅Run the project
 
 From the repository root:
 
@@ -165,7 +165,7 @@ For a meaningful experiment, compare at least:
 
 Use a time-ordered split where possible to reduce leakage between highly similar flows. For a rigorous adversarial experiment, perturb only features that can meaningfully change in a real flow and validate the generated examples against domain constraints.
 
-## Research idea and contribution
+## 🧪Research idea and contribution
 
 The core idea is to combine supervised known-attack classification with unsupervised anomaly detection, then use asynchronous, incremental updates to reduce the cost of adapting to changing data. The research question is not simply whether retraining improves a score, but **when it improves detection, how quickly it does so, and what latency, false-positive, and stability costs it introduces**.
 
@@ -181,6 +181,6 @@ Potential extensions:
 
 This repository is a modular research starting point. Results must be generated on the dataset and configuration used for each experiment; numbers reported in the source paper should not be assumed to reproduce automatically with this refactored implementation.
 
-## Safety
+## 🛟Safety
 
 Run experiments on offline datasets or a lab network you are authorized to test. This project does not perform packet injection or deploy blocking rules.
