@@ -1,0 +1,13 @@
+{
+  "label_column": "Label",
+  "normal_label": "BENIGN",
+  "test_size": 0.30,
+  "random_state": 42,
+  "isolation_contamination": 0.10,
+  "retrain_threshold": 100,
+  "retrain_batch_size": 64,
+  "feedback_queue_size": 8,
+  "pgd_epsilon": 0.05,
+  "pgd_step_size": 0.01,
+  "pgd_steps": 5
+}
