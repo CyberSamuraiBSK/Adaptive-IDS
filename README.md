@@ -86,7 +86,7 @@ Adaptive-IDS/
 - scikit-learn
 - joblib
 
-## Setup
+## 📐Setup
 
 ### 1. Clone the repository
 
@@ -153,7 +153,7 @@ python -m src.adaptive_ids.cli --dataset data/cicids2017_combined_sampled.csv --
 
 Use `--help` to see all command-line options.
 
-## Evaluation methodology
+## 🤖Evaluation methodology
 
 For a meaningful experiment, compare at least:
 
