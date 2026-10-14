@@ -4,6 +4,8 @@
 
 This Adaptive-IDS investigates the possibility of using lightweight incremental learning for an IDS to adapt to changing traffic patterns without retraining all models from scratch each time.
 
+---
+
 ## ⚙️How it works
 
 ```text
@@ -32,6 +34,8 @@ Preprocessing + train-only feature scaling
                         v
                 Updated model state
 ```
+
+---
 
 ### Main components
 
