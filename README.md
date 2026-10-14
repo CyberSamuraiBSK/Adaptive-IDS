@@ -7,10 +7,10 @@ This Adaptive-IDS investigates the possibility of using lightweight incremental 
 ## ⚙️How it works
 
 ```text
-CICIDS2017-style CSV
+CICIDS2017-dataset CSV
         |
         v
-Cleaning + train-only feature scaling
+Preprocessing + train-only feature scaling
         |
         +------------------------------+
         |                              |
