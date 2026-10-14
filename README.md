@@ -2,9 +2,7 @@
 
 **A hybrid, adaptive intrusion detection system for known, anomalous, and adversarially perturbed network-flow data.**
 
-Adaptive-IDS explores whether lightweight incremental learning can help an intrusion detection system respond to changing traffic patterns without repeatedly retraining every model from scratch.
-
-The project is based on the idea and prototype in *AI-based Intrusion Detection System: Real-Time Retraining for Adaptive Security against Known and Adversarial Attacks*. It reorganizes the prototype into a reproducible Python project focused on implementation, evaluation, and further development.
+This Adaptive-IDS investigates the possibility of using lightweight incremental learning for an IDS to adapt to changing traffic patterns without retraining all models from scratch each time.
 
 ## ⚙️How it works
 
@@ -45,13 +43,13 @@ Cleaning + train-only feature scaling
 
 ## ⚠️Important scope and limitations
 
-This repository is a **research prototype**, not a production network sensor. It currently reads pre-extracted flow features from CSV files; it does not capture packets, extract flows from a live interface, or enforce firewall rules.
+This detection system is a **prototype for research purposes** and not an actual network sensor. It only reads the extracted flow features from CSV files and does not involve any packet capturing or implementation of firewall policies.
 
-Labels are available in benchmark evaluation data. In a real deployment, correct labels are not normally known at prediction time. Therefore, online updates must come from an analyst, incident response workflow, or another trusted labeling source. The optional feedback replay in this project is an experiment that simulates such confirmed feedback; it must not be interpreted as an automatic way to discover ground truth.
+The labeling can be done using the benchmarking data for evaluation. In a real-world setting, however, the right labels would not be available at the time of making predictions. This means that online learning updates would have to be done using some sort of an analyst or through an incident response process. Feedback replay used in this project is an experiment in the form of simulated feedback.
 
-Feature-space adversarial perturbations are useful for controlled experiments but may not correspond to valid, realizable network traffic. Results should be reported as feature-space robustness, not proof of resistance to real attacks.
+Adversarial perturbations on feature space are valuable for experiments under control but do not have anything to do with real attacks. The results must be presented as robustness in feature space and cannot be considered evidence of attack resistance.
 
-The implementation is intentionally conservative: it does not automatically retrain on every prediction or treat an unverified model prediction as ground truth.
+This approach is deliberately conservative because it neither retunes for each prediction nor regards the model’s prediction of an unknown situation as being true.
 
 ## 🏗️Repository structure
 
@@ -167,7 +165,7 @@ Use a time-ordered split where possible to reduce leakage between highly similar
 
 ## 🧪Research idea and contribution
 
-The core idea is to combine supervised known-attack classification with unsupervised anomaly detection, then use asynchronous, incremental updates to reduce the cost of adapting to changing data. The research question is not simply whether retraining improves a score, but **when it improves detection, how quickly it does so, and what latency, false-positive, and stability costs it introduces**.
+The fundamental principle here is that of combining supervised attack classifications with unsupervised anomaly detections, followed by asynchronous, incremental updates to lower the costs of adaptation to changing data. However, the question raised in the research is not so much whether retraining will improve the score, but **how and when this is achieved, and at what costs of latency, false positives, and instability**.
 
 Potential extensions:
 - Adaptive retraining thresholds based on recent error/drift measurements.
@@ -179,8 +177,8 @@ Potential extensions:
 
 ## 🔬Development status
 
-This repository is a modular research starting point. Results must be generated on the dataset and configuration used for each experiment; numbers reported in the source paper should not be assumed to reproduce automatically with this refactored implementation.
+This repo serves as a modular beginning point for research work. Numbers should be produced using the dataset and setting for each individual experiment, and it cannot be expected that numbers given in the source paper will automatically replicate using this implementation.
 
 ## 🛟Safety
 
-Run experiments on offline datasets or a lab network you are authorized to test. This project does not perform packet injection or deploy blocking rules.
+Experiment using offline data sets or a lab network that you have permission to experiment with. No packet injection or blocking is performed with this project.
