@@ -6,7 +6,7 @@ Adaptive-IDS explores whether lightweight incremental learning can help an intru
 
 The project is based on the idea and prototype in *AI-based Intrusion Detection System: Real-Time Retraining for Adaptive Security against Known and Adversarial Attacks*. It reorganizes the prototype into a reproducible Python project focused on implementation, evaluation, and further development.
 
-## How it works
+## ⚙️How it works
 
 ```text
 CICIDS2017-style CSV
@@ -43,7 +43,7 @@ Cleaning + train-only feature scaling
 - **Evaluation:** reports standard classification metrics for the supervised model and binary benign/anomaly metrics for Isolation Forest.
 - **Adversarial experiment:** an optional PGD-style perturbation routine explores model sensitivity in standardized feature space.
 
-## Important scope and limitations
+## ⚠️Important scope and limitations
 
 This repository is a **research prototype**, not a production network sensor. It currently reads pre-extracted flow features from CSV files; it does not capture packets, extract flows from a live interface, or enforce firewall rules.
 
@@ -177,7 +177,7 @@ Potential extensions:
 - Flow extraction from PCAP files or integration with a live telemetry source.
 - Reproducible comparison against static SGD, Isolation Forest, and other baselines.
 
-## Development status
+## 🔬Development status
 
 This repository is a modular research starting point. Results must be generated on the dataset and configuration used for each experiment; numbers reported in the source paper should not be assumed to reproduce automatically with this refactored implementation.
 
