@@ -55,6 +55,8 @@ Adversarial perturbations on feature space are valuable for experiments under co
 
 This approach is deliberately conservative because it neither retunes for each prediction nor regards the model’s prediction of an unknown situation as being true.
 
+---
+
 ## 🏗️Repository structure
 
 ```text
@@ -79,6 +81,8 @@ Adaptive-IDS/
 └── tests/
     └── test_data.py
 ```
+
+---
 
 ## 📋Requirements
 
@@ -129,6 +133,8 @@ Prepare a CSV containing numeric flow features and a target column named `Label`
 
 Do not commit the dataset unless you have checked its licensing, size, and redistribution terms. See [`data/README.md`](data/README.md).
 
+---
+
 ## ✅Run the project
 
 From the repository root:
@@ -155,6 +161,8 @@ python -m src.adaptive_ids.cli --dataset data/cicids2017_combined_sampled.csv --
 
 Use `--help` to see all command-line options.
 
+---
+
 ## 🤖Evaluation methodology
 
 For a meaningful experiment, compare at least:
@@ -166,6 +174,8 @@ For a meaningful experiment, compare at least:
 5. **Robustness and safety:** report per-class precision/recall/F1, false-positive rate, and class imbalance; do not rely on accuracy alone.
 
 Use a time-ordered split where possible to reduce leakage between highly similar flows. For a rigorous adversarial experiment, perturb only features that can meaningfully change in a real flow and validate the generated examples against domain constraints.
+
+---
 
 ## 🧪Research idea and contribution
 
@@ -179,9 +189,13 @@ Potential extensions:
 - Flow extraction from PCAP files or integration with a live telemetry source.
 - Reproducible comparison against static SGD, Isolation Forest, and other baselines.
 
+---
+
 ## 🔬Development status
 
 This repo serves as a modular beginning point for research work. Numbers should be produced using the dataset and setting for each individual experiment, and it cannot be expected that numbers given in the source paper will automatically replicate using this implementation.
+
+---
 
 ## 🛟Safety
 
