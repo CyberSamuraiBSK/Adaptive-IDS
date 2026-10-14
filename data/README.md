@@ -7,7 +7,7 @@ This project expects a CSV of pre-extracted numeric network-flow features with a
 3. Ensure benign traffic is labeled `BENIGN`, or pass the correct value using `--normal-label`.
 4. Place the prepared CSV here, or pass its path with `--dataset`.
 
-## ⚠️
+## ⚠️Preparation
 The dataset is not included in this repository. 
 
 Preprocessing replaces infinite values with missing values and removes rows with missing feature/label values. The scaler is fitted only on the training split to avoid test-set leakage.
